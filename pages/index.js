@@ -10,13 +10,14 @@ export default function abc (){
        <div className="d-flex ">
 
            <div className="rounded-2 d-flex  m-3 w-75  text-center text-white"
-                style={{height: "300px", backgroundColor: "darkblue",}}>
+                style={{height: "280px", backgroundColor: "darkblue",}}>
                <PendingTask dp={""}/>
-               <div className="bg-white shadow-lg rounded-2 w-100 m-3"></div>
+               <div className=" shadow-lg rounded-2 w-100 m-3" style={{backgroundColor
+               :"#cde0fd"}}></div>
 
            </div>
            <div className=" w-25  d-flex rounded-2 m-3 text-center text-white"
-                style={{height: "300px", backgroundColor: "darkblue",}}><PendingTask dp={""}/>
+                style={{height: "280px", backgroundColor: "darkblue",}}><PendingTask dp={""}/>
 
                <div className="lina shadow-lg rounded-2 w-100 m-3"></div>
            </div>
@@ -42,19 +43,56 @@ Day <br/> {i}
            <div className="w-50 m-3 bg-danger rounded-2 mina" style={{height: "300px",}}>
 
                <div className="achievements-container">
-                   <h2>Your Achievements</h2>
-                   <div className="trophies">
-                       <img src="/icon/Gold Medal.png" className="trophy" alt="Gold Medal"/>
-                       <img src="/Medal Purple.png" className="trophy" alt="Purple Medal"/>
-                       <img src="/Medal Red.png" className="trophy" alt="Red Medal"/>
-                       <img src="/Silver Medal.png" className="trophy" alt="Silver Medal"/>
+                   <h5 className={"p-3"}>Achievements</h5>
+                   <div className="d-flex justify-content-around">
+                       <div className="" style={{width: "60px"}}>
+
+                           <img src="/icon/Gold Medal.png" className=" img-fluid" alt="Gold Medal"/>
+
+                       </div>
+                            <div className="" style={{width: "60px"}}>
+
+                           <img src="/icon/Medal%20Purple.png" className=" img-fluid" alt="Gold Medal"/>
+
+                       </div>
+                            <div className="" style={{width: "60px"}}>
+
+                           <img src="/icon/Silver%20Medal.png" className=" img-fluid" alt="Gold Medal"/>
+
+                       </div>
+                            <div className="" style={{width: "60px"}}>
+
+                           <img src="/icon/Medal%20Red.png" className=" img-fluid" alt="Gold Medal"/>
+
+                       </div>
+
+
+                   </div>
+                   <div className="d-flex justify-content-around">
+                       <div className="" style={{width: "60px"}}>
+
+                           <img src="/icon/Silver%20Medal.png" className=" img-fluid" alt="Gold Medal"/>
+
+                       </div>
+                       <div className="" style={{width: "60px"}}>
+
+                           <img src="/icon/Medal%20Purple.png" className=" img-fluid" alt="Gold Medal"/>
+
+                       </div>
+
+                       <div className="" style={{width: "60px"}}>
+
+                           <img src="/icon/Gold Medal.png" className=" img-fluid" alt="Gold Medal"/>
+
+                       </div>
 
                    </div>
                </div>
 
            </div>
-           <div className="w-50 m-3 bg-info rounded-2 mina " style={{height: "300px",}}>
-               <div className="m-2 table-responsive pb-3" style={{height: "280px",}}>
+           <div className="w-50 m-3 bg-info rounded-2 mina px-3" style={{height: "300px",}}>
+               <div className="m-2 table-responsive" style={{height: "280px",}}>
+                   <div className="p-2 h5 pb-0">Leaderboard</div>
 
                    <table className="table table-primary table-striped text-center p-5">
                        <thead>

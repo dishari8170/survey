@@ -143,3 +143,13 @@ h2 {
     justify-content: center;
 
 }
+
+.sina {
+
+    background: linear-gradient(to right, orange, darkorange);
+
+}
+
+.nina {
+    background-color: #cde0fd;
+}
