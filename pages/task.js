@@ -1,56 +1,98 @@
-export default () => {
+import OSIdeBar from "@/component/OSIdeBar";
+import {useEffect, useState} from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 
-    return <>
-        <div className="d-flex justify-content-center align-items-center"
-             style={{ width: "100vw", height: "100vh", backgroundColor: "blue" }}>
 
-            <div className="d-flex mina shadow-lg rounded-3 justify-content-center align-items-center"
-                 style={{ width: "98vw", height: "98vh", backgroundColor: "black" }}>
 
-                <div className="d-flex shadow-lg rounded-3 justify-content-center align-items-center"
-                     style={{ width: "95vw", height: "95vh", backgroundColor: "blue", padding: "20px" }}>
 
-                    <div className="table-responsive w-100 h-100">
-                        <table className="table table-bordered w-100 h-100">
-                            <thead className="table-info text-center">
-                            <tr>
-                                <th>Task</th>
-                                <th>Time</th>
-                                <th>Priority</th>
-                                <th>Status</th>
-                                <th>Action</th>
+export default function StaticPage() {
+
+    const [tasks, setTasks] = useState([]);
+
+    useEffect(() => {
+        axios.get("/api/gettask")
+            .then(response => {
+                setTasks(response.data);
+            })
+            .catch(error => {
+                console.error("Error fetching data:", error);
+            });
+    }, []);
+    return (
+        <OSIdeBar>
+            <div className="p-3 mina"
+                 style={{height: "100vh",}}>
+                <div className="h2 text-center  text-white fw-bolder">All Task</div>
+
+                <div className="fixed-table w-100  vh-100">
+                    <table className="table table-bordered w-100">
+                        <thead className="table-info text-center">
+                        <tr>
+                            <th>Task</th>
+                            <th>DAY</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody className="text-center">
+
+
+                        {tasks.map(task => (
+                            <tr key={task._id}>
+
+                                <td>{task.task}</td>
+                                <td>{task.day} </td>
+                                <td>incomplete</td>
+                                <td>{task.priority}</td>
+                                <td><button className="btn btn-sm btn-info" onClick={o=>{
+
+                                    window.location.href="/view2?id="+task._id;
+                                }}>View</button>
+                                   </td>
                             </tr>
-                            </thead>
-                            <tbody className="text-center">
-                            <tr>
-                                <td>Design UI</td>
-                                <td>2 hours</td>
-                                <td className="text-success">Completed</td>
-                                <td className="text-danger">High</td>
-                                <td>
-                                    <button className="btn btn-sm btn-info">view</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Code Backend</td>
-                                <td>3 hours</td>
-                                <td className="text-warning">In Progress</td>
-                                <td className="text-primary">Medium</td>
-                                <td>
-                                    <button className="btn btn-sm btn-info">view</button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                        ))}
+                        <tr>
+                            <td>Design UI</td>
+                            <td>2 </td>
+                            <td className="text-success">Completed</td>
+                            <td className="text-danger">High</td>
+                            <td>
+                                <button className="btn btn-sm btn-info">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Code Backend</td>
+                            <td>3 </td>
+                            <td className="text-warning">In Progress</td>
+                            <td className="text-primary">Medium</td>
+                            <td>
+                                <button className="btn btn-sm btn-info">View</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Meeting</td>
+                            <td>30 Minutes </td>
+                            <td className="text-info">Start in 11:30AM</td>
+                            <td className="text-primary">High</td>
+                            <td>
+                                <button className="btn btn-sm btn-info" onClick={j=>{
+
+                                    Swal.fire({title:"Join Meeting",html: "Do You want to join the meeting",icon: "question",showCancelButton:true})
 
 
+                                }}>Join</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
 
-    </>
-
-
+        </OSIdeBar>
+    );
 }

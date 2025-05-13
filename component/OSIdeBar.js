@@ -106,13 +106,12 @@ const OSIdeBar = ({theme="dark", children }) => {
 <div className={"d-flex justify-content-between align-items-center"} style={{backgroundColor:'rgb(38,12,135)'}}>
 
 
-
     <h3 className={"p-2 font-monospace"} style={{color:"#4880FF"}}>
         ODG<span className="text-warning ">TAX</span>PRO
     </h3>
-<div className="bg-info rounded-2 w-50 p-1">
+<div className="lina rounded-2 w-50 p-1">
 
-    <div className="w-50 bg-warning rounded " style={{minHeight:"20px"}}></div>
+    <div className="w-50  rounded " style={{minHeight:"20px",backgroundColor:"#F5F5DC",}}></div>
 
 
 </div>
@@ -128,10 +127,8 @@ const OSIdeBar = ({theme="dark", children }) => {
             <div style={{fontSize:"10pt"}} className={"mt-1"}>Client id: <span className={"text-warning"}>#RH3X4R</span> </div>
         </div>
 
-    <div className="rounded-circle bg-white me-3 p-2"  style={{width:"50px",height:"50px"}}>
+    <div className="rounded-circle bg-white me-3 p-2"  style={{width:"40px",height:"40px"}}>
 
-        <div className="w-50 bg-info"></div>
-        <div className="w-50 bg-info"></div>
 
         <img src="/logoog.png" alt="" className="img-fluid"/>
     </div>
@@ -162,29 +159,24 @@ const OSIdeBar = ({theme="dark", children }) => {
 
 
 <div className="pb-1 bg-white"></div>
-                    <MenuItem  icon={<FaList />} style={{ padding: '16px'}}>Services</MenuItem>
-                    <MenuItem icon={<FaUsers />} style={{ padding: '16px' }}>Clients</MenuItem>
-                    <MenuItem icon={<FaFile />} style={{ padding: '16px' }}>Documents</MenuItem>
-                    <MenuItem icon={<FaCalendarAlt />} style={{ padding: '16px' }}>Job Calendar</MenuItem>
+                    <MenuItem  icon={<FaList />} style={{ padding: '16px'}}>Dashboard</MenuItem>
+                    <MenuItem icon={<FaUsers />} style={{ padding: '16px' }}>Tasks</MenuItem>
+                    <MenuItem icon={<FaFile />} style={{ padding: '16px' }}>Achievement </MenuItem>
+                    <MenuItem icon={<FaCalendarAlt />} style={{ padding: '16px' }}>Meeting</MenuItem>
                     <MenuItem icon={<FaBell />} style={{ padding: '16px' }}>Notifications</MenuItem>
                     <MenuItem icon={<FaMoneyBill />} style={{ padding: '16px' }}>Invoices</MenuItem>
 
                 </Menu>
             </Sidebar>
-            <div className="w-100">
+            <div className="w-100 h-100 overflow-y-scroll">
 
                 <div className="w-100 bg-white pb-1"></div>
 
                 {children}
             </div>
 
-<div className="">
-
-    <div className="">
 
 
-    </div>
-</div>
 
         </div></>
     );
