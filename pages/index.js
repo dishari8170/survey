@@ -26,36 +26,12 @@ export default function abc (){
        <div className="container">
 
            <div className="d-flex justify-content-around">
+               {Array.from({ length: 7 }, (_, i) => (
 
-               <div className="rounded " style={{width: "100px", height: "100px"}}>
-                    className={"rounded-circle"} style={{width: "100px", height: "100px"}} alt=""/>
-
-
-               </div>  <div className="" style={{width: "100px", height: "100px"}}>
-                   <img src="/157580-050-5F569440.webp" className={"img-fluid w-100"} alt=""/>
-
-
-               </div>  <div className="" style={{width: "100px", height: "100px"}}>
-                   <img src="/157580-050-5F569440.webp" className={"img-fluid w-100"} alt=""/>
-
-
-               </div>  <div className="" style={{width: "100px", height: "100px"}}>
-                   <img src="/157580-050-5F569440.webp" className={"img-fluid w-100"} alt=""/>
-
-
-               </div>  <div className="" style={{width: "100px", height: "100px"}}>
-                   <img src="/157580-050-5F569440.webp" className={"img-fluid w-100"} alt=""/>
-
-
-               </div>  <div className="" style={{width: "100px", height: "100px"}}>
-                   <img src="/157580-050-5F569440.webp" className={"img-fluid w-100"} alt=""/>
-
-
-               </div>  <div className="" style={{width: "100px", height: "100px"}}>
-                   <img src="/157580-050-5F569440.webp" className={"img-fluid w-100"} alt=""/>
-
-
-               </div>
+                   <div className="rounded dayes text-center " >
+Day <br/> {i}
+                   </div>
+               ))}
 
            </div>
 
