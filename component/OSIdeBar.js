@@ -113,6 +113,7 @@ const OSIdeBar = ({theme="dark", children }) => {
 
     <div className="w-50 bg-warning rounded " style={{minHeight:"20px"}}></div>
 
+
 </div>
     <div className="d-flex text-white align-items-center">
 
