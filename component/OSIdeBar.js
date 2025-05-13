@@ -106,6 +106,7 @@ const OSIdeBar = ({theme="dark", children }) => {
 <div className={"d-flex justify-content-between align-items-center"} style={{backgroundColor:'rgb(38,12,135)'}}>
 
 
+
     <h3 className={"p-2 font-monospace"} style={{color:"#4880FF"}}>
         ODG<span className="text-warning ">TAX</span>PRO
     </h3>
