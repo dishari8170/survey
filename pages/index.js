@@ -39,8 +39,94 @@ Day <br/> {i}
 
 
        <div className="d-flex">
-           <div className="w-50 m-3 bg-danger rounded-2 mina" style={{height: "300px",}}></div>
-           <div className="w-50 m-3 bg-info rounded-2 mina " style={{height: "300px",}}></div>
+           <div className="w-50 m-3 bg-danger rounded-2 mina" style={{height: "300px",}}>
+
+               <div className="achievements-container">
+                   <h2>Your Achievements</h2>
+                   <div className="trophies">
+                       <img src="/Gold Medal.png" className="trophy" alt="Gold Medal"/>
+                       <img src="/Medal Purple.png" className="trophy" alt="Purple Medal"/>
+                       <img src="/Medal Red.png" className="trophy" alt="Red Medal"/>
+                       <img src="/Silver Medal.png" className="trophy" alt="Silver Medal"/>
+
+                   </div>
+               </div>
+
+           </div>
+           <div className="w-50 m-3 bg-info rounded-2 mina " style={{height: "300px",}}>
+               <div className="m-2 table-responsive pb-3" style={{height: "280px",}}>
+
+                   <table className="table table-primary table-striped text-center p-5">
+                       <thead>
+                       <tr>
+                           <th>Rank</th>
+                           <th>Name</th>
+                           <th>Points</th>
+                       </tr>
+                       </thead>
+                       <tbody>
+                       <tr>
+                           <td>🏆 1</td>
+                           <td>Alice</td>
+                           <td>1000</td>
+                       </tr>
+                       <tr>
+                           <td>🥈 2</td>
+                           <td>Bob</td>
+                           <td>950</td>
+                       </tr>
+                       <tr>
+                           <td>🥉 3</td>
+                           <td>Charlie</td>
+                           <td>900</td>
+                       </tr>
+                       <tr>
+                           <td>4</td>
+                           <td>David</td>
+                           <td>850</td>
+                       </tr>
+                       <tr>
+                           <td>5</td>
+                           <td>Emma</td>
+                           <td>800</td>
+                       </tr>
+                         <tr>
+                           <td>5</td>
+                           <td>Emma</td>
+                           <td>800</td>
+                       </tr>
+                        <tr>
+                           <td>5</td>
+                           <td>Emma</td>
+                           <td>800</td>
+                       </tr>
+                        <tr>
+                           <td>5</td>
+                           <td>Emma</td>
+                           <td>800</td>
+                       </tr>
+                        <tr>
+                           <td>5</td>
+                           <td>Emma</td>
+                           <td>800</td>
+                       </tr>
+                        <tr>
+                           <td>5</td>
+                           <td>Emma</td>
+                           <td>800</td>
+                       </tr>
+                        <tr>
+                           <td>5</td>
+                           <td>Emma</td>
+                           <td>800</td>
+                       </tr>
+
+                       </tbody>
+                   </table>
+               </div>
+
+
+           </div>
 
        </div>
 
