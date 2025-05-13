@@ -109,7 +109,11 @@ const OSIdeBar = ({theme="dark", children }) => {
     <h3 className={"p-2 font-monospace"} style={{color:"#4880FF"}}>
         ODG<span className="text-warning ">TAX</span>PRO
     </h3>
-<div className="bg-black rounded-2 w-75">123</div>
+<div className="bg-info rounded-2 w-50 p-1">
+
+    <div className="w-50 bg-warning rounded " style={{minHeight:"20px"}}></div>
+
+</div>
     <div className="d-flex text-white align-items-center">
 
 

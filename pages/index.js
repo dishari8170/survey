@@ -44,7 +44,7 @@ Day <br/> {i}
                <div className="achievements-container">
                    <h2>Your Achievements</h2>
                    <div className="trophies">
-                       <img src="/Gold Medal.png" className="trophy" alt="Gold Medal"/>
+                       <img src="/icon/Gold Medal.png" className="trophy" alt="Gold Medal"/>
                        <img src="/Medal Purple.png" className="trophy" alt="Purple Medal"/>
                        <img src="/Medal Red.png" className="trophy" alt="Red Medal"/>
                        <img src="/Silver Medal.png" className="trophy" alt="Silver Medal"/>
