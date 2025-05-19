@@ -158,7 +158,23 @@ const OSIdeBar = ({theme="dark", children }) => {
                 <Menu menuItemStyles={menuItemStyles}>
 
 
-<div className="pb-1 bg-white"></div>
+<div className="pb-1  bg-white"></div>
+
+
+
+                    <SubMenu  label="Task">
+                        {[...Array(30)].map((_, index) => (
+                            <MenuItem key={index} icon={<FaUsers />} style={{ padding: '16px' }}>
+                                Day {index + 1}
+                            </MenuItem>
+                        ))}
+                    </SubMenu>
+
+
+
+
+
+
                     <MenuItem  icon={<FaList />} style={{ padding: '16px'}}>Dashboard</MenuItem>
                     <MenuItem icon={<FaUsers />} style={{ padding: '16px' }}>Tasks</MenuItem>
                     <MenuItem icon={<FaFile />} style={{ padding: '16px' }}>Achievement </MenuItem>

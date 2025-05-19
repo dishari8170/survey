@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 
 const TaskSchema = Yup.object().shape({
     task: Yup.string().required("Task is required"),
-    priority: Yup.string().required("Priority is required"),
+    video_id: Yup.string().required("video_id is required"),
     date: Yup.string().required("Date is required"),
     day: Yup.string().required("Day is required"),
 });
@@ -32,7 +32,7 @@ const TaskForm = () => {
     }
     return (
         <Formik
-            initialValues={{ task: "", priority: "",  day: "" }}
+            initialValues={{ task: "", video_id: "",  day: "" }}
             // validationSchema={TaskSchema}
             onSubmit={async (values, { resetForm }) => {
                 try {
@@ -55,9 +55,9 @@ const TaskForm = () => {
                         </div>
 
                         <div className="my-2">
-                            <label className="mb-2">Priority:</label>
-                            <Field className="form-control" name="priority"/>
-                            {errors.priority && touched.priority ? <div>{errors.priority}</div> : null}
+                            <label className="mb-2">video_id:</label>
+                            <Field className="form-control" name="video_id"/>
+                            {errors.video_id && touched.video_id ? <div>{errors.video_id}</div> : null}
                         </div>
 
 
@@ -68,6 +68,7 @@ const TaskForm = () => {
                         </div>
 
                         <div className="mt-2 bg-dark p-3 rounded-2">
+
 
                             {Editor ? <Editor form={setvalueofdes}></Editor> : ""
 

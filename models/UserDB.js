@@ -33,7 +33,11 @@ const homesliderSchema = new mongoose.Schema(
             type: String,
             default: ''
         }
-        ,
+       ,
+    task : {
+        type :[String],default :[]
+    }
+,
 
         otp: Number,
 
@@ -41,6 +45,7 @@ const homesliderSchema = new mongoose.Schema(
     {
         timestamps:true,
     }
+
 
 );
 

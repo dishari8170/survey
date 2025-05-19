@@ -25,6 +25,7 @@ export default function Home() {
             </div>
 
 
+
             <div className="section">
                 <h2>Today's Task</h2>
                 <div className="today-task">
