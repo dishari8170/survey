@@ -9,6 +9,13 @@ const homesliderSchema = new mongoose.Schema(
             }
         },
 
+        trn:[
+            mongoose.Schema.Types.ObjectId
+
+        ],
+
+
+
         name: {
             type: String,
             default: '' // You can set a default value if needed

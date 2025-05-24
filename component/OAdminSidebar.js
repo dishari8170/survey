@@ -13,7 +13,7 @@ import {FaX} from "react-icons/fa6";
 
 
 
-const OSIdeBar = ({theme="dark", children }) => {
+const OAdminSidebar = ({theme="dark", children }) => {
 
 
 
@@ -175,17 +175,21 @@ const OSIdeBar = ({theme="dark", children }) => {
 
 
 
+                    <MenuItem icon={<FaMoneyBill />} style={{ padding: '16px' }}>Manage Users</MenuItem>
 
+                    <MenuItem icon={<FaFile />} style={{ padding: '16px' }} onClick={d=>{
+                        window.location.href="/admin/course"
+                    }} >Training  </MenuItem>
 
-
-                    <MenuItem icon={<FaFile />} style={{ padding: '16px' }} >Achievement </MenuItem>
+                    <MenuItem icon={<FaFile />} style={{ padding: '16px' }}onClick={d=>{
+                        window.location.href="/admin/code"
+                    }} > Secret Code</MenuItem>
                     <MenuItem icon={<FaCalendarAlt />} style={{ padding: '16px' }}>Meeting</MenuItem>
                     <MenuItem icon={<FaBell />} style={{ padding: '16px' }}>Notifications</MenuItem>
-                    <MenuItem icon={<FaMoneyBill />} style={{ padding: '16px' }}>Invoices</MenuItem>
 
                 </Menu>
             </Sidebar>
-            <div className="w-100 h-100 overflow-y-scroll">
+            <div className="w-100 h-100 overflow-y-scroll"  >
 
                 <div className="w-100 bg-white" style={{minHeight:"1px"}}></div>
 
@@ -199,4 +203,4 @@ const OSIdeBar = ({theme="dark", children }) => {
     );
 };
 
-export default OSIdeBar;
+export default OAdminSidebar;

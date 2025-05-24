@@ -1,18 +1,414 @@
-.beautihover {
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Base Styles */
+.dashboard-container {
+    background-color: #F8FAFC;
+    min-height: 100vh;
 }
 
-.beautihover:hover {
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transform: translateY(-3px) scale(1.1);
+.dashboard-header {
+    background-color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.dashboard-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #3F51B5, #9C27B0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.welcome-message {
+    color: #64748B;
+    font-size: 1rem;
+}
+
+/* User Avatar */
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.user-avatar:hover {
+    transform: scale(1.1);
+}
+
+/* Notification Button */
+.notification-btn {
+    background: none;
+    border: none;
+    position: relative;
+    font-size: 1.2rem;
+    color: #64748B;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.notification-btn:hover {
+    background-color: #F1F5F9;
+    color: #3F51B5;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #EF4444;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stats Cards */
+.stat-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    background: white;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.stat-value {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #1E293B;
+}
+
+.stat-label {
+    color: #64748B;
+    margin-bottom: 0.5rem;
+}
+
+.stat-trend {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.stat-trend.up {
+    color: #10B981;
+}
+
+.stat-trend.down {
+    color: #EF4444;
+}
+
+/* Continue Learning Card */
+.continue-card {
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #3F51B5, #2196F3);
+    color: white;
+    box-shadow: 0 10px 25px rgba(63, 81, 181, 0.3);
+    overflow: hidden;
+}
+
+.section-title {
+    font-weight: 600;
+    color: #1E293B;
+    margin-bottom: 1rem;
+}
+
+.continue-card .section-title {
+    color: white;
+}
+
+.progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.progress-bar .progress-bar {
+    background-color: white;
+}
+
+.btn-resume {
+    background-color: white;
+    color: #3F51B5;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-resume:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.continue-image {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.progress-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Course Cards */
+.course-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    background: white;
+}
+
+.course-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.course-image {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.week-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.completed-badge {
+    background-color: #ECFDF5;
+    color: #10B981;
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+}
+
+.in-progress-badge {
+    background-color: #FEF3C7;
+    color: #D97706;
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+}
+
+.btn-continue {
+    background: none;
+    border: 1px solid #E2E8F0;
+    color: #3F51B5;
+    border-radius: 8px;
+    padding: 0.25rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-continue:hover {
+    background-color: #3F51B5;
+    color: white;
+}
+
+/* Staff Cards */
+.staff-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    background: white;
+}
+
+.staff-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+}
+
+.btn-staff {
+    background: none;
+    border: none;
+    color: #64748B;
+    font-size: 0.8rem;
+    padding: 0.25rem 0;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.btn-staff:hover {
+    color: #3F51B5;
+}
+
+/* Featured Carousel */
+.featured-carousel {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.featured-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.featured-header {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.featured-subtitle {
+    color: #64748B;
+    margin-bottom: 0.5rem;
+}
+
+.btn-featured {
+    background: linear-gradient(90deg, #3F51B5, #9C27B0);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-featured:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(63, 81, 181, 0.3);
+    color: white;
+}
+
+/* Announcements */
+.announcements-card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    background: white;
+}
+
+.announcement-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #F1F5F9;
+    display: flex;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.announcement-item.urgent .announcement-badge {
+    background-color: #EF4444;
+}
+
+.announcement-badge {
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #3F51B5;
+}
+
+.view-announcements {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #3F51B5;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.view-announcements:hover {
+    color: #1E40AF;
+    text-decoration: underline;
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-all {
+    color: #64748B;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.view-all:hover {
+    color: #3F51B5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
 }

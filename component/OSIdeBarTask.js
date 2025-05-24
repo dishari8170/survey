@@ -13,7 +13,7 @@ import {FaX} from "react-icons/fa6";
 
 
 
-const OSIdeBar = ({theme="dark", children }) => {
+const OSIdeBarTask = ({theme="dark", children }) => {
 
 
 
@@ -199,4 +199,4 @@ const OSIdeBar = ({theme="dark", children }) => {
     );
 };
 
-export default OSIdeBar;
+export default OSIdeBarTask;

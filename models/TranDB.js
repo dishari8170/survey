@@ -2,15 +2,19 @@ import mongoose from "mongoose";
 
 const taskSchema = new mongoose.Schema({
     title: String,
-    thumb: String,
+    id: String,
+    user: String,
     intro: String,
     video: String,
     time: String,
-    data: String,
+    task:String,
+    taskp:String,
+    taskp:String,
+
     point:Number,
     category:String
 })
 
-const TaskDB = mongoose.models.TaskDB || mongoose.model("TaskDB", taskSchema);
+const TranDB = mongoose.models.TranDB || mongoose.model("TranDB", taskSchema);
 
-export default TaskDB;
+export default TranDB;
